@@ -1,0 +1,29 @@
+Through a variation of sub-asignments we learned the basics of the robot,
+like controlling motors and utilizing sensors for our benefit. The early
+asignments were everything from simple manuvering, to controlled object-manuvering
+and line following.
+<br><br>
+The first thing we set up was a group contract, that also included information about how
+we should proceed for the final project. We put our goals in a prioritized list:
+<br><br>
+First of all - sucesfully finish the race,
+<br><br>
+Then went to prioritizing winning the race,
+<br><br>
+And finally, possibly sabotage if it doesn't affect ourselfs (speed, winning, etc).
+<br><br>
+We quickly decided to divide into two persons on each stand. One group building and one
+group programming. This was meant to organize us better, and let one group be experts at
+one thing at a time. This method worked really well and we shuffled the roles from time to
+time.
+<br><br>
+With our main goals in mind, we put lots of effort in building the best possible tracking system by
+utilizing the color sensor, and developing the most failproof and optimized line-tracking code we could.
+Personally i spent most of my time as a programmer in the team, since my longer experience in the field.
+This allowed me to be helpful for the other team members in the learning process.
+<br><br>
+We sucesfully made a really good tracking system using two color sensors. This allowed us to start on
+our mission of sabotage, where our plan was to make a lift that would throw random black LEGO pieces
+to throw off the oponents sensors.
+<br><br>
+SLUTTEN!
