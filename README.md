@@ -41,7 +41,7 @@
 </a>
 
 <a href="mailto:sapula.pawel@gmail.com">
-  <img src="resources/pictures/mail.png" alt="Email" width="100" style="vertical-align:middle;" />
+  <img src="resources/pictures/mail.png" alt="Email" width="65" style="vertical-align:middle;" />
 </a>
 
 </div>
