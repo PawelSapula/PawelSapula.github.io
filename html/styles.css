@@ -1,0 +1,221 @@
+body{
+    background-color: rgb(51, 51, 54);
+}
+
+a, p, h1, h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: antiquewhite;
+    text-decoration: none;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header{
+    display: block;
+    background-color: rgb(37, 38, 41);
+    border: 3px solid antiquewhite;
+}
+
+.menu{
+    display: inline-block;
+    width: 100%;
+}
+
+.menu a{ 
+    padding: 10px;
+    margin-top: 25px;
+    margin-right: 10px;
+    border:1px solid antiquewhite;
+    float: right;
+}
+
+.menu a:nth-of-type(2){
+   margin-right: 20px;
+}
+
+a.lenkeStart{
+    display:inline-flex;
+    float: left;
+    height: auto;
+    width: 3%;
+    margin: 0;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 180px; 
+    border-radius: 100%;
+    border:0;
+    padding: 0;
+}
+
+.menu a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* original uten hyperlink
+header img{
+    height: 7%;
+    width: auto; eller 3%
+    padding-top: 20px;
+    padding-left: 20px;
+}
+*/
+
+.tittel{
+    padding-bottom: 70px;
+
+    align-content: center;
+    justify-items: center;
+
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    text-align: center;
+    
+}
+
+main{
+    display: block;
+    font-size: larger;
+    text-align: center;
+    justify-items: center;
+}
+
+.flexplane{
+    display: flex;
+    align-items: center;
+    margin: 100px;
+    gap:50px;
+}
+
+.flexbox{
+    flex: 1;
+}
+
+.flexbox img{
+    width: 50%;
+    height: auto;
+}
+
+footer{
+    background-color: rgb(37, 38, 41);
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    border: 3px solid antiquewhite;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.shadow-box{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.menu .path{
+    border-color: black;
+    color: black;
+}
+
+.image_box{
+    display: inline-flex;
+    width: 300px;
+    height: 200px;
+    border:3px solid antiquewhite;
+    margin: 20px;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline_list{
+    display: inline-flex;
+    width: 300px;
+    margin: 20px;
+    
+}
+.inline_list_long{
+    display: inline-flex;
+    width: auto;
+    margin: 20px;
+}
+.inline_list img{
+    max-width: 75%;
+    height: auto;
+}
+
+.inline_list_long img{
+    max-width: 75%;
+    height: auto;
+}
+
+.inline_list div{
+    max-width: 75%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 768px){
+
+    header{
+        padding-bottom: 50px;
+    }
+
+    .menu{
+        display: inline-block;
+    }
+
+    .menu a{
+        margin: 10px;
+        margin-top: 15px;
+    }
+
+    a.lenkeStart{
+        margin-top: 4%;
+        width: 10%;
+    }
+
+    .tittel{
+        display: inline;
+    }
+
+    .flexplane{
+        display: block;
+        margin:0px;
+        margin-bottom:100px;
+    }
+
+    .flexbox{
+        margin-top: 50px;
+    }
+
+    .flexbox img{
+        width: 80%;
+    }
+
+    .inline_list_long{
+        display: block;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+/*
+
+.container {
+    display: flex;  Makes the div a flex container 
+    justify-content: center;  Centers content horizontally 
+    align-items: center;  Centers content vertically 
+    text-align: center;
+    height: 200px;
+    border: 1px solid black;  For visualization 
+}
+    .container img - get img type
+
+Border - a border around the HTML element
+Padding - a space/padding between the element and the border
+Margin - spacing outside the border
+*/
