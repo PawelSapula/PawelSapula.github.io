@@ -1,0 +1,87 @@
+#!/usr/bin/env pybricks-micropython
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import Motor, ColorSensor, UltrasonicSensor
+from pybricks.parameters import Port, Stop
+from pybricks.tools import wait, StopWatch
+from pybricks.robotics import DriveBase
+from pybricks.media.ev3dev import SoundFile
+import random
+import threading
+
+
+# --- Oppsett ---
+ev3 = EV3Brick()
+
+left_motor = Motor(Port.D)
+right_motor = Motor(Port.A)
+# Ekstra “small motor” – velg en ledig port (B eller C)
+small_motor = Motor(Port.C)
+
+robot = DriveBase(left_motor, right_motor, wheel_diameter=40.0, axle_track=150)
+color_sensor = ColorSensor(Port.S3)
+obstacle_sensor = UltrasonicSensor(Port.S2)
+
+# --- Konstanter ---
+BLACK = 30
+WHITE = 70
+threshold = (BLACK + WHITE) / 2
+DRIVE_SPEED = 60
+PROPORTIONAL_GAIN = 1.2
+
+INTERVAL = 10_000  # ms (10 sekunder)
+
+# --- Hjelpefunksjoner ---
+def rygg():
+    # kort "rygg-lyd"
+    for _ in range(3):
+        ev3.speaker.beep(440, 200)  # 200 ms
+        wait(750)
+
+def underholde():
+    tilfeldig_tall = random.randint(1, 4)
+
+    if tilfeldig_tall == 1:
+        # Lydshow – spill en innebygd lydfil
+        ev3.speaker.beep()
+        ev3.speaker.set_volume(100)
+        ev3.speaker.say("AAAAAAAAAAAAAAAAAAAA")
+    elif tilfeldig_tall == 2:
+        # Flagge – kjør hjelpe-motor uten å blokkere
+        small_motor.run_time(1000, 1500)
+    elif tilfeldig_tall == 3:
+        # “Rygg”-beep + et lite rykk bakover uten å blokkere helt
+        t2 = threading.Thread(target=rygg)
+        t2.start()
+        robot.drive(-50, 0)  # (fart mm/s, sving grader/s)
+        wait(2000)
+        robot.stop()
+    elif tilfeldig_tall == 4:
+        # Trommesolo med pip
+        for _ in range(3):
+            ev3.speaker.beep(600, 150)
+            wait(120)
+            ev3.speaker.beep(900, 150)
+            wait(120)
+
+# --- Hovedprogram (én løkke) ---
+watch = StopWatch()
+last_fun = -INTERVAL  # slik at vi får første “underholde” etter INTERVAL
+
+while True:
+    # Linjefølger
+    deviation = color_sensor.reflection() - threshold
+    turn_rate = PROPORTIONAL_GAIN * deviation
+    robot.drive(DRIVE_SPEED, turn_rate)
+
+    # Hinder (valgfrie 10 cm)
+    if obstacle_sensor.distance() < 100:
+        robot.stop()
+        ev3.speaker.play_file(SoundFile.CHEERING) 
+
+    # “Samtidig” underholdning hvert INTERVAL
+    if watch.time() - last_fun >= INTERVAL:
+        robot.stop()
+        underholde()
+        last_fun = watch.time()
+
+    wait(10)  # 10 ms “tick”

@@ -2,7 +2,7 @@ body{
     background-color: rgb(51, 51, 54);
 }
 
-a, p, h1, h2{
+a, p, h1, h2, summary{
     font-family: 'Courier New', Courier, monospace;
     color: antiquewhite;
     text-decoration: none;
@@ -154,6 +154,21 @@ footer{
     height: auto;
 }
 
+.lego{
+    background-image: url("/resources/pictures/lego_forran_2.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: center;
+}
+
+.code details div{
+    text-align: left;
+    background-color: rgb(37, 38, 41);
+    text-shadow: 0px;
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace;
+}
 
 @media screen and (max-width: 768px){
 

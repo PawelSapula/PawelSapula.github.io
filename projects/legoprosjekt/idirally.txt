@@ -1,0 +1,119 @@
+#!/usr/bin/env pybricks-micropython
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import Motor, ColorSensor, UltrasonicSensor
+from pybricks.parameters import Port, Stop
+from pybricks.tools import wait, StopWatch
+from pybricks.robotics import DriveBase
+from pybricks.media.ev3dev import SoundFile
+
+############# OPPSETT ###################
+ev3 = EV3Brick()
+
+left_motor = Motor(Port.D)
+right_motor = Motor(Port.A)
+
+robot = DriveBase(left_motor, right_motor, wheel_diameter=40.0, axle_track=150)
+cs_left = ColorSensor(Port.S3)
+cs_right = ColorSensor(Port.S2)
+
+############# Konstanter ################
+BLACK = 30
+WHITE = 70
+threshold = (BLACK + WHITE) / 2
+
+DRIVE_SPEED = 120
+PROPORTIONAL_GAIN=1.1
+
+#########################################
+
+def svingKontrollerMK1(deviation_left, deviation_right, deviationLimit, driveSpeedMult, proportionalGainMult):
+    if(abs(deviation_left) > deviationLimit or abs(deviation_right) > deviationLimit):
+        return DRIVE_SPEED * driveSpeedMult, PROPORTIONAL_GAIN * proportionalGainMult 
+    
+def svingKontrollerMK2(deviation_left, deviation_right, maxDeviationConstant):
+    delta = (abs(deviation_left) + abs(deviation_right))/2
+    proportion = delta / maxDeviationConstant
+    if(proportion >= 0.5 and proportion <= 1.0):
+        return DRIVE_SPEED * proportion, PROPORTIONAL_GAIN * proportion
+
+def logData(deviation_left, deviation_right):
+    print("------------------------------------------------------------")
+    print("Color Scanner Left: {0}, Color Scanner Right: {1}".format(cs_left.reflection(), cs_right.reflection()))
+    print("deviation: [l/r]: {0} {1}".format(deviation_left, deviation_right))
+    print("------------------------------------------------------------")
+
+while True:
+    DS = DRIVE_SPEED
+    PG = PROPORTIONAL_GAIN
+
+    deviation_left = cs_left.reflection() - threshold
+    deviation_right = cs_right.reflection() - threshold
+
+    logData(deviation_left, deviation_right)
+
+    #Optional, men for testing
+    #DS, PG = svingKontrollerMK1(deviation_left, deviation_right, 40, 0.6, 0.8)
+    #DS, PG = svingKontrollerMK2(deviation_left, deviation_right, 50)
+    #diff = abs(deviation_left - deviation_right)
+
+    if(deviation_left != deviation_right):  #Dual sensor magi
+        if(deviation_left > deviation_right):
+            turn_rate = -1 * PG * deviation_left
+        else:
+            turn_rate = PG * deviation_right
+    else:
+        turn_rate = 0
+
+    robot.drive(DS, turn_rate)
+    wait(13) #Endring: 10 -> 13
+
+    if kjor_motor:
+        small_motor.run_time(-500, 1000)
+        wait(500)
+        small_motor.run_time(500, 1000)
+        kjor_motor = False
+
+"""
+
+24.09.2025--------------------------------------
+
+Dillemaer
+1. Sikkerhet eller hastighet
+    Sikkeret (mulige options): hard-sving-kontroller mk1, hard-sving-kontroller mk2, sjekke differanse
+        --> Masse tid går til fixing og finjustering
+    Hastighet
+        --> Mest mulig speed og "håpe" at det går fint
+
+    Eventuelle endringer for å nå målene:
+        Små:
+            Hastighets- og svingingvariablene (DRIVE_SPEED, PROPORTIONAL_GAIN)
+            Differansekontrolleren (diff variabelen istendenfor deviation_left != deviation_right)
+        Store:
+            Legge til sjekkefunksjonene (mk1/mk2) og muligens endre dem
+
+
+Variabler i programmet
+    - BLACK - useless
+    - WHITE - useless
+    - threshold - (BLACK+WHITE)/2. Et gjennomsnitt. Dette er en limiter som stiller etterpå hva maksimalverdien
+                av fargesensor refleksjon blir stilt til. Reflection 100 er totalt hvitt, 0 er svart.
+    - deviation_left/right - den kalibrerte verdien av opplevd refleksjon av fargesensoren og threshold.
+    - turn_rate - positiv eller negativt produkt av konstanten PROPORTIONAL_GAIN og deviation_left/right. Denne stiller inn
+                antall deg/s robotten skal kjøre.
+
+
+Fremgangsmåte i prioritert rekkefølge:
+
+    Mål: Øke fart ved å øke sette grense på hvor mye den hakker. Deretter sikre at robotten kommer seg rundt og
+        videre øke fart for å ende opp som vinneren
+
+    1. Fikle med PG, samt kanskje threshold verdien.
+        --> Hvis suksess, øke speed
+        --> Hvis miserabelt, punkt 2.
+    2. Fikle med differanse-if og finjustere verdier
+    3. Fikle med svingkontroller funksjonene
+    4. Endre store deler av koden for å oppnå 
+
+-----------------------------------------------
+
+"""

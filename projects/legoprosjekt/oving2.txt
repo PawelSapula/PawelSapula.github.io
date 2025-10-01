@@ -1,0 +1,66 @@
+#!/usr/bin/env pybricks-micropython
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
+                                 InfraredSensor, UltrasonicSensor, GyroSensor)
+from pybricks.parameters import Port, Stop, Direction, Button, Color
+from pybricks.tools import wait, StopWatch, DataLog
+from pybricks.robotics import DriveBase
+from pybricks.media.ev3dev import SoundFile, ImageFile
+import threading
+
+
+# This program requires LEGO EV3 MicroPython v2.0 or higher.
+# Click "Open user guide" on the EV3 extension tab for more information.
+
+
+# Lager objekt
+ev3 = EV3Brick()
+
+#initialisering
+obstacle_sensor = UltrasonicSensor(Port.S2)
+left_motor = Motor(Port.D)
+right_motor = Motor(Port.A)
+robot = DriveBase(left_motor, right_motor, wheel_diameter=40.0, axle_track=150)
+touch_sensor = TouchSensor(Port.S1)
+
+state = False
+rep = 0
+
+# Metoder
+def sjekkStatus():
+    global state
+    while(True):
+        if(touch_sensor.pressed()):
+            if(state):
+                state = False
+            else:
+                state = True
+            print("status " + str(state))
+        wait(200)
+
+t1 = threading.Thread(target=sjekkStatus)
+t1.start()
+
+ev3.screen.print("Exercise 2 start.")
+wait(3000)
+ev3.screen.clear()
+while(True): ##Endre på rep, her er det gjort til å fullstendig stoppe etter 2 ganger
+    if(state):
+    
+        robot.drive(100, 0)
+
+        while obstacle_sensor.distance() > 150:
+            wait(10)
+            if(state == False):
+                break
+
+        robot.straight(-150)
+        robot.turn(35)
+        rep == 1+rep
+
+    else:
+        wait(50)
+        if(rep > 1):
+            ev3.screen.print("Exercise done.")
+            wait(3000)
+            break
