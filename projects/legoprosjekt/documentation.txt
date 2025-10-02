@@ -1,7 +1,10 @@
 Through a variation of sub-asignments we learned the basics of the robot,
 like controlling motors and utilizing sensors for our benefit. The early
-asignments were everything from simple manuvering, to controlled object-manuvering
-and line following.
+tasks were everything from simple manuvering, to controlled object-manuvering
+and line following. In more detail, was the first asignment about driving in a square, and the second
+was to imitate "Bernt", NTNU's grasscutter. The third and last oligatory task
+was driving and doing random tasks while line-following on a test track. We quickly
+progressed in great sucession, and went for the finale. 
 <br><br>
 The first thing we set up was a group contract, that also included information about how
 we should proceed for the final project. We put our goals in a prioritized list:
