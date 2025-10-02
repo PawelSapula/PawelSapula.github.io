@@ -1,4 +1,4 @@
 This asignment as previously mentioned, was about creating and controlling a LEGO EV3 Mindstorm robot
 in Python to fulfill a series of different sub-asignments and then participate in the IDI-Rally. The IDI-Rally was
 a tournament of racing on a fixed lane by using different sensors. Here we would build our robots to
-potentially outsmart other teams with traps and other methods of sabotages.
+potentially outsmart other teams with traps and other methods of sabotage.

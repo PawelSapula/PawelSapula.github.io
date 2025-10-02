@@ -6,6 +6,11 @@ out underways.
 This experience was a really nice way of introducing me into the everyday of
 most developers, namely collaboration over one common goal.
 <br>
+Not only that, but i drastically refined my Python knowledge, which was important
+in the diverse other subjects that we have. I'm also really happy about my
+function as a teacher, where people with none previous experience could quickly
+start to develop code on their own.
+<br>
 I've always liked to work alone, where i would precisely know what is wrong and what
 should be done. Nonetheless, this assignment showed me that i was totally wrong,
 whereas a huge assignment that would normally be really stressfull, could become

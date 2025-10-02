@@ -1,12 +1,13 @@
 Through a variation of sub-asignments we learned the basics of the robot,
-like controlling motors and utilizing sensors for our benefit. The early
-tasks were everything from simple manuvering, to controlled object-manuvering
-and line following. In more detail, was the first asignment about driving in a square, and the second
-was to imitate "Bernt", NTNU's grasscutter. The third and last oligatory task
-was driving and doing random tasks while line-following on a test track. We quickly
-progressed in great sucession, and went for the finale. 
+like controlling the motors and utilizing sensors for our benefit. The early
+tasks were everything from simple manuvering, to controlled obstacle-manuvering
+and line following. To detail it more, the first assignment was about driving in a square.
+The second assignment was about imitating "Bernt" NTNUs grasscutter. Then on the
+last one we had to develop complex line-tracking which would do randomized tasks every ten seconds
+and sucessfully stop itself after all have been executed.
+We progressed in great sucession, and went for the finale. 
 <br><br>
-The first thing we set up was a group contract, that also included information about how
+To start in retrospective, the first thing we did was to set up was a group contract, that also included information about how
 we should proceed for the final project. We put our goals in a prioritized list:
 <br><br>
 First of all - sucesfully finish the race,
@@ -15,7 +16,7 @@ Then went to prioritizing winning the race,
 <br><br>
 And finally, possibly sabotage if it doesn't affect ourselves (speed, winning, etc).
 <br><br>
-We quickly decided to divide into two persons on each stand. One group building and one
+We quickly decided to divide into two people on each stand. One group building and one
 group programming. This was meant to organize us better, and let one group be experts at
 one thing at a time. This method worked really well and we shuffled the roles from time to
 time.
@@ -27,6 +28,6 @@ This allowed me to be helpful for the other team members in the learning process
 <br><br>
 We sucesfully made a really good tracking system using two color sensors. This allowed us to start on
 our mission of sabotage, where our plan was to make a lift that would throw random black LEGO pieces
-to throw off the oponents sensors.
+behind itself, to throw off the oponents sensors.
 <br><br>
 SLUTTEN!
