@@ -30,4 +30,6 @@ We sucesfully made a really good tracking system using two color sensors. This a
 our mission of sabotage, where our plan was to make a lift that would throw random black LEGO pieces
 behind itself, to throw off the oponents sensors.
 <br><br>
-SLUTTEN!
+Despite our huge efforts, not everything in the universe can be predicted. While we were doing the last
+tests right before the tournament, we unfortunately tightened the wheel up unknowingly. This made the tracking
+worthless, where the robot instantly went off track because the wheel couldn't spin and keep itself on right tempo.
