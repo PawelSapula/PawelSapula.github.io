@@ -170,6 +170,11 @@ footer{
     font-family: 'Courier New', Courier, monospace;
 }
 
+.code details img{
+    width: 80%;
+    height: auto;
+}
+
 @media screen and (max-width: 768px){
 
     header{
