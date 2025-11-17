@@ -170,6 +170,14 @@ footer{
     background-position-y: center;
 }
 
+.prog{
+    background-image: url("/resources/pictures/hackerman.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: center;
+}
+
 .code details div{
     text-align: left;
     background-color: rgb(37, 38, 41);
