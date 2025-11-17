@@ -162,6 +162,14 @@ footer{
     background-position-y: center;
 }
 
+.lego_main{
+    background-image: url("/resources/pictures/robot_angled.JPEG");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position-y: center;
+}
+
 .code details div{
     text-align: left;
     background-color: rgb(37, 38, 41);
