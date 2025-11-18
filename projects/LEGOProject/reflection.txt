@@ -1,1 +1,7 @@
-Refleksjon
+Even while the final result having a miserable ending, this project was a
+very educational and essential step in teamwork and working habits as a computer engineer.
+Our groups teamwork ability blossomed and got stronger for each week.
+The problem that came underways, teached us how to tinker, explore and handle difficult,
+not yet solved things, which is an essential engineer ability in my opinion.
+Nonetheless both building/tinkering and Python skills where further refined, which will
+be necessary in the diverse subject we will encounter on the road.

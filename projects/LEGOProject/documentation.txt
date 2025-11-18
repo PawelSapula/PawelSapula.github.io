@@ -1,1 +1,19 @@
-documentation
+We started planning and sketch the basis of the robot. The robot was set to be a static
+veichle, where limited time to our disposition made it more important to focus on the
+actual functionality.
+<br>
+We once more split the team to ensure multitasking and expertize of each category. This time
+were i on the building group while the others that previously did it, were programming or 
+doing miscallaneous work, that being raport writing and helping out where necessary.
+<br>
+The build itself going really well, made me move to the programming team. They encountered
+a big problem that wasn't solvable right away, which happened to take me in to the development team.
+Scrapping the code so far, the focus went over to debugging. We quickly found out that
+the sensor was made clearly for LEGO bricks, and detecting the minature indicators on the
+pH-strip was a total failure.
+<br>
+Many hours were wasted on trying to solve our problem, but in the end we had to use a LEGO simulation
+of indicator colors or just approximate to make any kind of result. This crushing result
+had to just be accepted, because of the color sensors simplified nature. Even while everything was
+sat up to the perfection, the fact that we're dealing with a introduction level LEGO
+set meant we should not be attempting rocket science with it! 
