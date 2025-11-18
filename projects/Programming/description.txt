@@ -1,1 +1,4 @@
-description
+These are mine assignments i did through out the course "Programmering 1". This is a subject that
+covers the not only the basics of Java but also advanced topics like data structures, OOP and
+formality (good and organized code). The repo/code for the assignments can be found on GitHub,
+where the link to this repository is found below.

@@ -1,1 +1,9 @@
-Refleksjon
+Despite being a quick pased subject as i described earlier, i have loved the Java programming
+language for years now. Developing code has not been anything new for me, but i
+surely has got a new perspective, grasp and orientation over the subject. I've learned complex
+methods and working ethics for coding, which enables working later in teams in structure. Diagrams
+and checkstyle have been amazing for understanding in depth the process of creating
+things with coding.
+<br>
+I haven't added the final "exam" in Programming I, because at the time of writing this, it's still
+a work in progress.
