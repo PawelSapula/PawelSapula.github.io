@@ -2,26 +2,26 @@ Even as a beginner course for the computer engineers, this subject catches up on
 going from easy in/out information handling, going to sorting methods and proficient OOP programming
 to automize and simplify tedious tasks.<br>
 What it is to be expected in the assignments:
-<br>
+<br><br>
 Assignment 1 - Variables, datatypes and expressions
-<br>
+<br><br>
 Assignment 2 - If statements
-<br>
+<br><br>
 Assignment 3 - Loops
-<br>
+<br><br>
 Assignment 4 - OOP, classes
-<br>
+<br><br>
 Assignment 5 - Classes as building blocks
-<br>
+<br><br>
 Assignment 6 - Tables of primitives
-<br>
+<br><br>
 Assignment 7 - Java API
-<br>
+<br><br>
 Assignment 8 - Cooperation between objects
-<br>
+<br><br>
 Assignment 9 - Tables of objects
-<br>
+<br><br>
 Assignment 10 - Table lists
-<br>
+<br><br>
 Assignment 11 - Trial exam
 <br>

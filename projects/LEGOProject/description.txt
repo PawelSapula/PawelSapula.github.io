@@ -1,8 +1,8 @@
 The Water Analysis Robot was an idea my group got after discussing around the world's current
 "Sustainable Development Goals" given by the UN. We quickly started talking about modern
-worlds water problem, which is often brushed under the carpet.<br>
+world's water problem, which is often brushed under the carpet in the media.<br>
 Regardless of how much comfort the people in the most industrialized countries live, are
-there many places on earth struggling on a daily basis to survive.
+there many places on earth struggling every single day to survive.
 <br>
 The intention behind this project was making an automized robot capable of simple analysis,
 that could declare if an source of liquid is safe to consume. 

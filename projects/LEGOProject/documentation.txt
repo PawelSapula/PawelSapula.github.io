@@ -1,10 +1,10 @@
-We started planning and sketch the basis of the robot. The robot was set to be a static
-veichle, where limited time to our disposition made it more important to focus on the
+We started planning and sketch the basis of the robot. The idea behind the robot was to make it a static
+vehichle, where limited time to our disposition made it more important to focus on the
 actual functionality.
 <br>
 We once more split the team to ensure multitasking and expertize of each category. This time
-were i on the building group while the others that previously did it, were programming or 
-doing miscallaneous work, that being raport writing and helping out where necessary.
+we exchanged the roles with each other, so that everyone would be doing something else.
+We had one developing code, one building the robot and two doing miscallaneous work, that being raport writing and helping out where necessary.
 <br>
 The build itself going really well, made me move to the programming team. They encountered
 a big problem that wasn't solvable right away, which happened to take me in to the development team.
